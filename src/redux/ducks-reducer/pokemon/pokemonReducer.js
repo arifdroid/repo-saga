@@ -1,10 +1,10 @@
-import { GET_POKEMON_FAILED, GET_POKEMON_REQUEST, GET_POKEMON_SUCCESS, GET_THIS_POKEMON_FAILED, GET_THIS_POKEMON_REQUEST, GET_THIS_POKEMON_SUCCESS } from "./pokemonAction"
+import { GET_CONCURRENT_POKEMON_FAILED, GET_POKEMON_FAILED, GET_POKEMON_REQUEST, GET_POKEMON_SUCCESS, GET_THIS_POKEMON_FAILED, GET_THIS_POKEMON_REQUEST, GET_THIS_POKEMON_SUCCESS } from "./pokemonAction"
 
 const initialState = {
     isFetching: false,
     data: {},
-    pokeid:null,
-    singleData:{}
+    pokeid: null,
+    singleData: {}
 }
 
 export default pokemonReducer = (state = initialState, action) => {
@@ -32,7 +32,7 @@ export default pokemonReducer = (state = initialState, action) => {
         case GET_THIS_POKEMON_REQUEST:
             return {
                 ...state,
-                pokeid:action.payload,
+                pokeid: action.payload,
                 isFetching: true
             }
         case GET_THIS_POKEMON_SUCCESS:
@@ -48,6 +48,8 @@ export default pokemonReducer = (state = initialState, action) => {
                 singleData: action.payload,
                 isFetching: false
             }
+
+        
 
         default:
             return state;
