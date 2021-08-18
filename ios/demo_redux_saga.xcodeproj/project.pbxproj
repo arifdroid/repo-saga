@@ -41,6 +41,7 @@
 		7C6F23653C8037236FD4A312 /* Pods-demo_redux_saga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo_redux_saga.debug.xcconfig"; path = "Target Support Files/Pods-demo_redux_saga/Pods-demo_redux_saga.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = demo_redux_saga/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88CED418FE2B38CAB6462B99 /* libPods-demo_redux_saga-demo_redux_sagaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demo_redux_saga-demo_redux_sagaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E4AF7726CCA3E4003F48A5 /* demo_redux_saga.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = demo_redux_saga.entitlements; path = demo_redux_saga/demo_redux_saga.entitlements; sourceTree = "<group>"; };
 		AD434397C2AC9D505EE18653 /* libPods-demo_redux_saga.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demo_redux_saga.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAFF25E06A0EC74EC4BA9B9A /* Pods-demo_redux_saga-demo_redux_sagaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo_redux_saga-demo_redux_sagaTests.release.xcconfig"; path = "Target Support Files/Pods-demo_redux_saga-demo_redux_sagaTests/Pods-demo_redux_saga-demo_redux_sagaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		13B07FAE1A68108700A75B9A /* demo_redux_saga */ = {
 			isa = PBXGroup;
 			children = (
+				A8E4AF7726CCA3E4003F48A5 /* demo_redux_saga.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -104,7 +106,6 @@
 				22E06836304388A8284199E3 /* Pods-demo_redux_saga-demo_redux_sagaTests.debug.xcconfig */,
 				FAFF25E06A0EC74EC4BA9B9A /* Pods-demo_redux_saga-demo_redux_sagaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -484,7 +485,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = demo_redux_saga/demo_redux_saga.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G6K7XFL693;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = demo_redux_saga/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,8 +500,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.demoreduxsaga;
 				PRODUCT_NAME = demo_redux_saga;
+				PROVISIONING_PROFILE_SPECIFIER = ProvisionDevDemo;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -510,7 +515,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = demo_redux_saga/demo_redux_saga.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G6K7XFL693;
 				INFOPLIST_FILE = demo_redux_saga/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -521,8 +529,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.demoreduxsaga;
 				PRODUCT_NAME = demo_redux_saga;
+				PROVISIONING_PROFILE_SPECIFIER = ProvisionDevDemo;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
